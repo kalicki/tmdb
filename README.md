@@ -3,7 +3,7 @@ The app will be fed with content from The Movie Database (TMDb).
 Site: themoviedb.org
 Documentation: developers.themoviedb.org
 
- ![Image of TMDb](tmdb/screenshots/sreen1.jpg) 
+ ![Image of TMDb](/screenshots/sreen1.jpg) 
 
 ## To-do
 The first release of the app will be very limited in scope, but will serve as the
