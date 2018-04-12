@@ -39,6 +39,7 @@ document.addEventListener 'DOMContentLoaded', ->
 				if request.status >= 200 and request.status < 400
 					# Success!
 					result = request.responseText
+					console.log(result)
 					document.querySelector('.movies-list').insertAdjacentHTML 'beforeend', result
 					isPaginating = false
 
