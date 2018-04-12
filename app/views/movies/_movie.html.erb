@@ -1,0 +1,14 @@
+<li class="movie-<%= movie.id %>">
+	<a href="/movies/<%= movie.id %>" title="<%= movie.original_title %>">
+		<% if movie.poster_path %>
+			<%= image_tag('http://image.tmdb.org/t/p/w300' + movie.poster_path, class: 'img-thumbnail') %>
+		<% else %>
+			<%= image_tag('https://dummyimage.com/300x450/000/fff', class: 'fallback-thumbnail') %>
+		<% end %>
+		<div class="movie-info">
+			<h3 class="movie-title"><%= movie.title %></h3>
+			<span class="movie-release">Release: <%= movie.release_date.to_date.strftime('%b, %m %Y') %></span>
+			<span class="movie-genres">Genres: <%= get_genre(movie.genre_ids) %></span>
+		</div>
+	</a>
+</li>

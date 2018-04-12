@@ -1,0 +1,121 @@
+// Place all the styles related to the Movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow:inset $top $left $blur $color;
+		-moz-box-shadow:inset $top $left $blur $color;
+		box-shadow:inset $top $left $blur $color;
+	} @else {
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
+	}
+}
+
+@mixin random-color() {
+	$random-color: rgb(random(255), random(200), random(150));
+	background: linear-gradient($random-color 5%, lighten($random-color, 25%) 100%);
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+a {
+	line-height: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.movies-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	> li {
+		padding: 2rem;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			float: left;
+			padding-left: 2rem;
+			padding-right: 1rem;
+		}
+
+		@for $i from 1 through 1000 {
+			&:nth-child(#{$i}) .movie-info {
+				@include random-color();
+			}
+		}
+
+		.movie-info {
+			margin-top: 6.5rem;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			max-height: 50%;
+			min-height: 50%;
+		}
+		.movie-title {
+			font-size: 1.2rem;
+			color: #fff;
+			font-weight: bold;
+		}
+		.movie-release, .movie-genres {
+			font-size: 0.8rem;
+			color: #fff;
+			display: block;
+			margin-top: 0.8rem;
+			margin-bottom: 0.8rem;
+		}
+	}
+}
+
+.movie-content {
+	> * {
+		width: 50%;
+	}
+	.content-left {
+		text-align: center;
+		float: left;
+	}
+	.content-right {
+		float: right;
+		
+		.movie-release, .movie-genres, {
+			display: block;
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+		}
+	}
+}
+
+.pagination {
+	position: fixed;
+	bottom: 0.5rem;
+	right: 0.5rem;
+	background-color: rgb(255, 247, 134);
+	color: #333;
+	font-weight: bold;
+	padding: 0.5rem; 
+}

@@ -1,0 +1,13 @@
+<h2>Upcoming - <%= @upcoming.total_results %> movies</h2>
+
+<ul class="movies-list">
+	<% @upcoming.results.each do |movie| %>
+		<% if movie %>
+			<%= render partial: 'movies/movie', collection: movie, locals: {movie: movie} %>
+		<% end %> 
+	<% end %>
+</ul>
+
+<span class="pagination" data-pagination-endpoint="/movies/pagination/" data-pagination-pages="<%= @upcoming.total_pages %>">
+	Loading...
+</span>
