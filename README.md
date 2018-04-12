@@ -1,13 +1,18 @@
 # Problem
 The app will be fed with content from The Movie Database (TMDb).
+
 Site: themoviedb.org
+
 Documentation: developers.themoviedb.org
 
  ![Image of TMDb](/screenshots/sreen1.jpg) 
 
 **Request Rate Limiting**
+
 TMDb enforce a small amount of rate limiting. Our current limits are 40 requests every 10 seconds and are limited by IP address, not API key.
-Ref: https://developers.themoviedb.org/3/getting-started/request-rate-limiting
+
+Ref:
+https://developers.themoviedb.org/3/getting-started/request-rate-limiting
 
 ## To-do
 The first release of the app will be very limited in scope, but will serve as the
@@ -27,7 +32,8 @@ and release date).
 Ruby 2.5.0
 Rails >= 5.1.6
 
-<sub>P.s: This project contains Ruby wrapper for TMDb https://github.com/18Months/themoviedb-api (Don't need to add)</sub>
+<sub>P.s: This project contains Ruby wrapper for TMDb
+ https://github.com/18Months/themoviedb-api (Don't need to add)</sub>
 
 ### How to use
 After the install requirements are completed, the next steps are:
