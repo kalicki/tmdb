@@ -7,6 +7,7 @@ Documentation: https://developers.themoviedb.org
 
  ![Image of TMDb](/screenshots/sreen1.jpg) 
 
+---
 **Request Rate Limiting**
 
 TMDb enforce a small amount of rate limiting. Our current limits are 40 requests every 10 seconds and are limited by IP address, not API key.
@@ -29,8 +30,8 @@ and release date).
 - [ ] Search for movies by entering a partial or full movie name.
 
 ### Requirements
-Ruby 2.5.0
-Rails >= 5.1.6
+- Ruby 2.5.0
+- Rails >= 5.1.6
 
 <sub>P.s: This project contains Ruby wrapper for TMDb
  https://github.com/18Months/themoviedb-api (Don't need to add)</sub>
@@ -41,7 +42,7 @@ After the install requirements are completed, the next steps are:
 - Create ENV: `export TMDB_API_KEY="YOUR_KEY_HERO"`
 - Execute server: `rails s`
 
-In browser: `localhost:3000`
+Run: `localhost:3000`
 
 ### Endpoint
 |           | URL               | Description|
