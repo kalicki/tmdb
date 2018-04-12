@@ -39,3 +39,8 @@ In browser: `localhost:3000`
 | GET       | /                 | Show all movies upcoming, by default region: `us`            |
 | GET       | /?region=         | Show all movies upcoming, basead in parameter, example: `?region=pt-BR`            |
 | GET       | /movies/:id       | Movie ID           |
+
+
+**Request Rate Limiting**
+TMDb enforce a small amount of rate limiting. Our current limits are 40 requests every 10 seconds and are limited by IP address, not API key.
+Ref: https://developers.themoviedb.org/3/getting-started/request-rate-limiting
