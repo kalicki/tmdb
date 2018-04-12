@@ -1,9 +1,9 @@
 # Problem
 The app will be fed with content from The Movie Database (TMDb).
 
-Site: themoviedb.org
+Site: https://themoviedb.org
 
-Documentation: developers.themoviedb.org
+Documentation: https://developers.themoviedb.org
 
  ![Image of TMDb](/screenshots/sreen1.jpg) 
 
