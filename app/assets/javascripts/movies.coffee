@@ -35,7 +35,7 @@ document.addEventListener 'DOMContentLoaded', ->
 			request = new XMLHttpRequest
 			request.open 'GET', baseEndpoint + currentPage, true
 
-			request.onload = ->
+			request.onreadystatechange = ->
 				console.log(request.status)
 				if request.status >= 200 and request.status < 400
 					# Success!
