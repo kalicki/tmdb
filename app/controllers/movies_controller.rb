@@ -18,8 +18,9 @@ class MoviesController < ApplicationController
 	# Idea: https://medium.com/wolox-driving-innovation/infinite-scrolling-ruby-on-rails-3fcd3bac0f75
 	# GET /movies/pagination/?page=
 	def pagination
-		@page = params[:page].nil? ? 1 : params[:page]
-		upcoming = Tmdb::Movie.upcoming({page: @page, region: 'us'}).results
+		page = params[:page].nil? ? 1 : params[:page]
+		region = params[:id].nil? ? 'us' : params[:region]
+		upcoming = Tmdb::Movie.upcoming({page: page, region: region}).results
 		render partial: 'movies/movie', collection: upcoming, locals: {movie: upcoming}
 	end
 
