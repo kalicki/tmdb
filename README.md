@@ -5,6 +5,10 @@ Documentation: developers.themoviedb.org
 
  ![Image of TMDb](/screenshots/sreen1.jpg) 
 
+**Request Rate Limiting**
+TMDb enforce a small amount of rate limiting. Our current limits are 40 requests every 10 seconds and are limited by IP address, not API key.
+Ref: https://developers.themoviedb.org/3/getting-started/request-rate-limiting
+
 ## To-do
 The first release of the app will be very limited in scope, but will serve as the
 foundation for future releases. It's expected that user will be able to:
@@ -39,8 +43,3 @@ In browser: `localhost:3000`
 | GET       | /                 | Show all movies upcoming, by default region: `us`            |
 | GET       | /?region=         | Show all movies upcoming, basead in parameter, example: `?region=pt-BR`            |
 | GET       | /movies/:id       | Movie ID           |
-
-
-**Request Rate Limiting**
-TMDb enforce a small amount of rate limiting. Our current limits are 40 requests every 10 seconds and are limited by IP address, not API key.
-Ref: https://developers.themoviedb.org/3/getting-started/request-rate-limiting
