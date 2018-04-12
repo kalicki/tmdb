@@ -36,6 +36,7 @@ document.addEventListener 'DOMContentLoaded', ->
 			request.open 'GET', baseEndpoint + currentPage, true
 
 			request.onload = ->
+				console.log(request.status)
 				if request.status >= 200 and request.status < 400
 					# Success!
 					result = request.responseText
