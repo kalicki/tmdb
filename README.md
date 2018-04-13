@@ -39,7 +39,7 @@ and release date).
 ### How to use
 After the install requirements are completed, the next steps are:
 - Gems: `bundle install`
-- Create ENV: `export TMDB_API_KEY="YOUR_KEY_HERO"`
+- Create ENV: `export TMDB_API_KEY="YOUR_KEY_HERE"`
 - Execute server: `rails s`
 
 Run: `localhost:3000`
